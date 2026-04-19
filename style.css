@@ -1,41 +1,95 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    text-align: center;
+  background: #e0e0e0;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-/* Card */
+/* [Step 2] Horizontal Card Layout */
+.content-wrapper {
+  display: flex;         /* Parent Flex */
+  flex-direction: row;   /* Horizontal alignment */
+  gap: 20px;            /* Spacing between cards */
+  flex-wrap: wrap;      /* Moves cards to next line on mobile */
+  justify-content: center;
+}
+
+/* CARD & [Step 3] Fix Image/Element Overflow */
 .card {
-    background: white;
-    width: 300px;
-    margin: 80px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: #fff;
+  /* width: 1000px; */   /* Commented out as per Step 3 instructions */
+  width: 350px;          /* Reasonable fixed width */
+  max-width: 100%;       /* Correct code to prevent overflow */
+  
+  border: 2px solid #333;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 10px 10px 20px #bebebe;
+
+  display: flex;
+  flex-direction: column; /* Keeps card contents vertical */
 }
 
-/* Image */
-.card img {
-    width: 90px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+/* PROFILE ICON */
+.profile-icon {
+  width: 70px;
+  height: 70px;
+  background: #FFD700;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0 auto 15px auto;
 }
 
-/* Name */
-.card h1 {
-    font-size: 20px;
-    color: #333;
+/* [Step 1] Navigation Menu Alignment */
+.actions {
+  display: flex;                 /* Flex declared on parent */
+  flex-direction: row;           /* Horizontal buttons */
+  justify-content: space-between; /* Space distributed between */
+  gap: 10px;
+  margin-top: 20px;
 }
 
-/* Text */
-.card p {
-    color: #666;
-    font-size: 14px;
-    margin: 5px 0;
+/* BUTTONS */
+.btn {
+  flex: 1;                       /* Makes both buttons equal width */
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-/* Highlight role */
-.card p:first-of-type {
-    color: #007bff;
-    font-weight: bold;
+.btn:hover {
+  background: #555;
+}
+
+/* TYPOGRAPHY */
+.university {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.9rem;
 }
