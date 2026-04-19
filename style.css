@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+/* Card */
+.card {
+    background: white;
+    width: 300px;
+    margin: 80px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Image */
+.card img {
+    width: 90px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Name */
+.card h1 {
+    font-size: 20px;
+    color: #333;
+}
+
+/* Text */
+.card p {
+    color: #666;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Highlight role */
+.card p:first-of-type {
+    color: #007bff;
+    font-weight: bold;
+}
